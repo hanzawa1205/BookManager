@@ -1,0 +1,10 @@
+*{
+    text-decoration: none;
+    border-radius: 18px;
+}
+.header{
+    margin: 0 auto;
+    height: 250px;
+    background-image: url("/static/b.png");
+    border-radius: 15px;
+}

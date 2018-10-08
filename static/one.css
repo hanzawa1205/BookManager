@@ -1,0 +1,8 @@
+*{
+    text-decoration: none;
+}
+.header{
+    background-image: url("/static/b.png");
+    height: 250px;
+    margin: 0 auto;
+}

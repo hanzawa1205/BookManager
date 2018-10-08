@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改密码</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    <style >
+        p{
+            text-align-all: center;
+        }
+        .btn{
+           display:block;margin:0 auto
+        }
+        </style>
+</head>
+<body>
+    <div class="carousel-item active">
+                        <img src="http://static.runoob.com/images/mix/img_fjords_wide.jpg" style="display:block;margin:0 auto">
+                    </div>
+    <div align="center"><form action="" method="post"  >
+        <div class="card-header" style="text-align-all: center">
+			</div>
+        <p><input type="hidden" name="username"></p>
+        <p>请输入旧密码</p>
+        <p><input type="password" name="old_password"></p>
+        <p>请输入新密码</p>
+        <p><input type="password" name="new_password"></p>
+        <p style="color: red">{{ err_msg }}</p>
+        <p>请再次输入新密码</p>
+        <p><input type="password" name="repeat_password"></p>
+        <div class="btn"><p><button type="submit" class="btn btn-primary">提交</button>
+            <a href="/get_book/" class="btn btn-link" style="">返回</a></p></div>
+    </form></div>
+    </body>
+    </html>

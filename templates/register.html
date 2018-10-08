@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+    <style >
+        p{
+            text-align-all: center;
+        }
+    </style>
+</head>
+<body>
+<div class="carousel-item active">
+                        <img src="http://static.runoob.com/images/mix/img_fjords_wide.jpg" style="display:block;margin:0 auto">
+                    </div>
+
+<div align="center"><form action="" method="post">
+    <div class="card-header" style="text-align-all: center">
+			</div>
+    <h2>注册</h2>
+    <p>用户名：</p>
+    <p><input type="text" name="username" id="i1" ><br><span id="e1"></span></p>
+    <p>密码：</p>
+    <p><input type="password" name="password"></p>
+    <p>邮箱</p>
+    <p><input type="email" name="email"></p>
+    <button type="submit" class="btn btn-primary" >提交</button>
+    <a href="/" class="btn btn-link">返回</a>
+</form></div>
+<script src="/static/jquery-3.3.1.js"></script>
+<script src="/static/setupajax.js"></script>
+<script>
+        $("#i1").blur(function () {
+            var  $i1Ele = $(this);
+            var name =  $i1Ele.val();
+            $("#e1").text("");
+            $.ajax({
+                url:"/register_c/",
+                type:"post",
+                data:{"name":name},
+                success: function (arg) {
+                    $("#e1").text(arg).css("color","red");
+                }
+            });
+
+            })
+</script>
+</body>
+</html>
